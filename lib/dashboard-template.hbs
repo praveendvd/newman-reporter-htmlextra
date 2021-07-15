@@ -830,6 +830,7 @@ body.theme-light code {
 {{/if}}
 {{/if}}
 {{#each executions}}
+{{#unless (containsRequest item.name)}}
     <div id="folder-{{cursor.ref}}" class="card-deck iteration-{{cursor.iteration}}">
     <div class="row iteration-{{cursor.iteration}}">
         <div class="col-sm-12 mb-3 iteration-{{cursor.iteration}}">
@@ -1200,6 +1201,7 @@ body.theme-light code {
         </div>
     </div>
     </div>
+{{/unless}}
 {{/each}}
 {{/inline}}
 
