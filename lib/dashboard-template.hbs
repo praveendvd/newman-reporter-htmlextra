@@ -836,7 +836,7 @@ body.theme-light code {
 {{/if}}
 {{/if}}
 {{#each executions}}
-{{#unless (containsRequest item.name)}}
+{{#isNotIn item.name @root.skipRequests}}
     <div id="folder-{{cursor.ref}}" class="card-deck iteration-{{cursor.iteration}}">
     <div class="row iteration-{{cursor.iteration}}">
         <div class="col-sm-12 mb-3 iteration-{{cursor.iteration}}">
